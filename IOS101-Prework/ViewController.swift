@@ -9,6 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var universityLabel: UILabel!
+    @IBOutlet weak var jobLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -17,8 +22,13 @@ class ViewController: UIViewController {
 
     @IBAction func changeBackgroundColor(_ sender: UIButton) {
         
-        let randomColor = changeColor()
-        view.backgroundColor = randomColor
+        let randomBgColor = changeColor()
+        view.backgroundColor = randomBgColor
+        
+        let randomTextColor = changeColor()
+        nameLabel.textColor = randomTextColor
+        universityLabel.textColor = randomTextColor
+        jobLabel.textColor = randomTextColor
     }
     
     func changeColor() -> UIColor {
